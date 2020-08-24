@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh './gradlew docker'
+                sh './gradlew --stacktrace docker'
             }
         }
         stage('Push Docker image') {
